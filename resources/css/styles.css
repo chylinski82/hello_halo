@@ -29,6 +29,10 @@ header {
     
 }
 
+.breadcrumb select, .mobile-br, .shop-mobile {
+    display: none;
+}
+
 #shop {
     display: inline;
     opacity: 1;
@@ -90,7 +94,7 @@ header input[type=text]:focus::placeholder {
     color: transparent;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     header {
         flex-wrap: wrap;
         height: auto;
@@ -113,11 +117,15 @@ header input[type=text]:focus::placeholder {
 
     .breadcrumb {
         order: 3;
-    }
-
-    .visible {
         
     }
 
+    .breadcrumb li #shop{
+        padding: 16px 25%;
+    }
+
+    #shop:hover ~.hidden {
+        display: none;
+    }
 
 }
