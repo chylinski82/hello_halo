@@ -68,7 +68,7 @@ a {
     font-size: 22px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    display: inline-block;     
+    display: inline;     
     position: relative;    
     z-index: 1;     
     padding: 2em;     
@@ -117,15 +117,41 @@ header input[type=text]:focus::placeholder {
 
     .breadcrumb {
         order: 3;
-        
+        /*display: flex;*/
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+        margin-bottom: 0;
+        box-sizing: content-box;
+        padding-top: 26px;
     }
 
-    .breadcrumb li #shop{
-        padding: 16px 25%;
+    .breadcrumb li {
+        margin-left: 0;
+        margin-right: 20px;
+        flex-basis: 50px;
+        box-sizing: content-box;
+        padding: 12px;
     }
+
+    /*.breadcrumb li #shop{
+        padding: 16px 25%;
+    }*/
 
     #shop:hover ~.hidden {
         display: none;
     }
 
+    a {
+        font-size: 22px;
+        z-index: 1;     
+          
+        /*margin: -2em;*/
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .breadcrumb {
+        align-content: flex-end;
+    }
 }
