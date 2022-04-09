@@ -1,4 +1,8 @@
 
+body {
+    /*max-height: 1000px;*/
+}
+
 /*          H E A D E R         
 ===============================================================================================================
 =============================================================================================================*/
@@ -37,12 +41,11 @@ header {
 }
 
 .breadcrumb li.current {
-    background-image: linear-gradient(to left,rgb(3, 0, 0) ,rgb(92, 20, 12) , rgb(175, 46, 31) , rgba(255, 38, 0, 0.723));
+    background-image: linear-gradient(to left, rgb(17, 16, 17) , rgba(255, 46, 46, 0.8));
 }
 
 #shop {
-    display: inline;
-    opacity: 1;
+    display: none;
 }
 
 #shop:hover ~.hidden {
@@ -52,11 +55,11 @@ header {
 }
 
 .breadcrumb li:hover {
-    background-image: linear-gradient(to left, rgb(17, 16, 17) , rgba(255, 46, 192, 0.723));
+    background-image: linear-gradient(to left, rgb(17, 16, 17) , rgba(255, 46, 192, 0.8));
 }
 
 .hidden {
-    opacity: 0;
+    display: inline;
     border-radius: 35% 0 0 35%;
 }
 
@@ -66,9 +69,6 @@ header {
     transition: opacity 750ms linear;
 }
 
-.hidden li:hover {
-    background-image: linear-gradient(to left, rgb(17, 16, 17) , rgba(197, 12, 74, 0.723));
-}
 
 header a {
     font-family: 'Ubuntu Mono', monospace;
@@ -90,7 +90,7 @@ header input[type=text] {
 }
 
 header input[type=text]:hover {
-    background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(255, 112, 212));
+    background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(255, 112, 212, 0.75));
 }
 
 header input[type=text]:focus {
@@ -102,11 +102,11 @@ header input[type=text]:focus::placeholder {
 }
 
 @media only screen and (max-width: 1100px) {
-    #shop:hover ~.hidden {
-        display: none;
+    #shop {
+        display: inline;
     }
 
-    .hidden:hover {
+    .hidden {
         display: none;
     }
 }
@@ -160,7 +160,7 @@ header input[type=text]:focus::placeholder {
 
 .container {
     display: flex;
-    border-bottom: 5px solid;
+    border-bottom: 2px solid;
 }
 
 aside {
@@ -170,9 +170,8 @@ aside {
     justify-content: center;
     width: 17%;
     flex-shrink: 1;
-    padding: 10px 10px 5px 5px;
-    border-right: 2px solid;
-    background-image: linear-gradient(to bottom right, hsl(0, 0%, 100%), hsl(0, 0%, 98%));
+    padding: 5px 3px 5px 8px;
+    background-image: linear-gradient(to bottom right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
     font-size: 32px;
     font-weight: 900;
 }
@@ -185,23 +184,79 @@ aside {
     display: flex;
     width: 83%;
     flex-shrink: 1;
-    padding: 20px 30px 50px 15px;
-    background-image: linear-gradient(to bottom right, hsl(0, 0%, 100%), hsl(0, 0%, 96%));
+    padding: 20px 30px 20px 0;
+    background-image: linear-gradient(to bottom right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
 }
 
 article {
     padding-left: 10px;
-    width: 30%;
+    width: 50%;
     font-size: 20px;
+    text-align: justify;
+}
+
+.narrow-text {
+    display: flex;
+    flex-basis: 23%;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.narrow-text h1 {
+    margin: 10px;
+}
+
+.price {
+    font-size: 64px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 900;
+    color:  rgba(171, 9, 123, 0.65);
+    margin: 0;
+}
+
+button {
+    font-size: 22px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(102, 74, 74));
+    height: 60px;
+    width: 100%;
+    border-radius: 15px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, rgb(242, 220, 237, 0.75) , rgba(233, 44, 176, 0.75));
+}
+
+article .fa {
+    font-size: 22px;
+}
+
+.extra-images {
+    width: 20%;
+    height: 350px;
+    padding-top: 20px;
+}
+
+.extra-images img {
+    height: 30%;
+}
+
+.extra-images img+img {
+    margin-top: 10px;
+}
+
+.extra-images img:hover {
+    border: 2px solid rgb(255, 112, 212);
 }
 
 figure {
-    width: 70%;
-    
+    width: 50%;
+    overflow: hidden;
 }
 
 .figure-images {
-    width: 100%;
+    max-width: 100%;
+    height: 350px;
 }
 
 .left-link, .right-link {
@@ -243,5 +298,6 @@ figure {
 }
 
 footer {
-    background-color: chartreuse;
+    background-image: linear-gradient(to left, rgba(227, 62, 188, 0.75) , rgb(255, 255, 255, 0.75));
+    height: 80px;
 }
