@@ -48,11 +48,6 @@ header {
     display: none;
 }
 
-#shop:hover ~.hidden {
-    display: inline;
-    opacity: 1;
-    transition: opacity 750ms linear;
-}
 
 .breadcrumb li:hover {
     background-image: linear-gradient(to left, rgb(17, 16, 17) , rgba(255, 46, 192, 0.8));
@@ -62,13 +57,6 @@ header {
     display: inline;
     border-radius: 35% 0 0 35%;
 }
-
-.hidden:hover {
-    display: inline;
-    opacity: 1;
-    transition: opacity 750ms linear;
-}
-
 
 header a {
     font-family: 'Ubuntu Mono', monospace;
