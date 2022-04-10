@@ -1,6 +1,9 @@
 
+
 body {
-    /*max-height: 1000px;*/
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 /*          H E A D E R         
@@ -61,6 +64,7 @@ header {
 header a {
     font-family: 'Ubuntu Mono', monospace;
     font-size: 22px;
+    font-weight: 500;
     color: rgb(255, 255, 255);
     text-decoration: none;
     display: inline;     
@@ -160,12 +164,20 @@ aside {
     flex-shrink: 1;
     padding: 5px 3px 5px 8px;
     background-image: linear-gradient(to bottom right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
-    font-size: 32px;
     font-weight: 900;
 }
 
+aside span {
+    font-size: 20px;
+}
+
+.quantity {
+    color: rgba(171, 9, 123, 0.65);
+    font-size: 32px;
+}
+
 .fa {
-    font-size: 96px;
+    font-size: 64px;
 }
 
 .main-content {
@@ -196,7 +208,7 @@ article {
 
 .price {
     font-size: 64px;
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Kalam', cursive;
     font-weight: 900;
     color:  rgba(171, 9, 123, 0.65);
     margin: 0;
@@ -249,8 +261,9 @@ figure {
 
 .left-link, .right-link {
     line-height: 1.5em;
-    font-weight: 900;
+    font-family: 'Ubuntu Mono', monospace;
     font-size: 22px;
+    font-weight: 500;
     color: rgb(102, 74, 74);
     text-decoration: none;
 }
@@ -288,4 +301,12 @@ figure {
 footer {
     background-image: linear-gradient(to left, rgba(227, 62, 188, 0.75) , rgb(255, 255, 255, 0.75));
     height: 80px;
+    font-family: 'Kalam', cursive;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 20px;
+}
+
+footer .fa {
+    font-size: 22px;
 }
