@@ -56,6 +56,10 @@ header {
     background-image: linear-gradient(to left, rgb(17, 16, 17) , rgba(255, 46, 192, 0.8));
 }
 
+header .fa {
+    display: none;
+}
+
 .hidden {
     display: inline;
     border-radius: 35% 0 0 35%;
@@ -144,6 +148,18 @@ header input[type=text]:focus::placeholder {
         z-index: 1;     
         padding: 0.5em 2em;
     }
+
+    header .fa {
+        display: flex;
+        font-size: 34px;
+        color: rgb(255, 108, 211);
+        position: absolute;
+        bottom: 25%;
+        right: 12%;
+        
+    }
+
+
 }
 
 /*          M A I N     C O N T E N T
@@ -298,6 +314,71 @@ figure {
     -webkit-transform: rotate(135deg);
 }
 
+@media only screen and (max-width: 1100px) {
+    aside, figcaption br {
+        display: none;
+    }
+
+    .right, .left {
+        border-width: 0 3px 3px 0;
+        padding: 5px;
+    }
+
+    figure {
+        min-width: 55%;
+    }
+
+    article {
+        min-width: 25%;
+    }
+
+    .narrow-text {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .main-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    figure, article {
+        width: 100%;
+        margin: 10px;
+        padding: 0;
+    }
+
+    .figure-images {
+        height: auto;
+        margin-left: 10px;
+    }
+
+    .left-link, .right-link {
+        font-size: 16px;
+        padding: 2px;
+    }
+
+    .extra-images {
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+    }
+    
+    .extra-images img {
+        width: 30%;
+        height: auto;
+        margin: 5px 10px;
+    }
+    
+    .extra-images img+img{
+        margin-top: 0;
+    }
+    
+}
+
 footer {
     background-image: linear-gradient(to left, rgba(227, 62, 188, 0.75) , rgb(255, 255, 255, 0.75));
     height: 80px;
@@ -309,4 +390,22 @@ footer {
 
 footer .fa {
     font-size: 22px;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    footer .fa {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    footer {
+        font-size: 12px;
+        height: 60px;
+    }
 }
