@@ -133,6 +133,7 @@ header input[type=text]:focus::placeholder {
         margin-left: 0;
         margin-bottom: 0;
         display: flex;
+        flex-wrap: nowrap;
         align-items: center;
         box-sizing: content-box;
         padding-top: 0;
@@ -299,6 +300,10 @@ figure {
     margin-right: 10px;
 }
 
+.right-mobile, .left-mobile {
+    display: none;
+}
+
 .right, .left {
     border: solid;
     border-width: 0 7px 7px 0;
@@ -306,12 +311,12 @@ figure {
     padding: 7px;
 }
  
-.right {
+.right, .right-mobile {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
 
-.left {
+.left, .left-mobile {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
@@ -321,10 +326,6 @@ figure {
         display: none;
     }
 
-    .right, .left {
-        border-width: 0 3px 3px 0;
-        padding: 3px;
-    }
 
     figure {
         min-width: 55%;
@@ -355,6 +356,17 @@ figure {
     .figure-images {
         height: auto;
         margin-left: 10px;
+    }
+
+    .right, .left {
+        display: none;
+    }
+
+    .right-mobile, .left-mobile {
+        border: solid;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
     }
 
     .left-link, .right-link {
